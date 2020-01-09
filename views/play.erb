@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <h1><%= @name1 + " versus " + @name2 %></h1>
-  <div><%= @name1 %>: 60/60 HP</div>
-  <div><%= @name2 %>: 60/60 HP</div>
+  <h1><%= @name1.name + " versus " + @name2.name %></h1>
+  <div><%= "#{@name1.name}: #{@name1.points}"%>/60 HP</div>
+  <div><%= "#{@name2.name}: #{@name2.points}"%>/60 HP</div>
   <a href="/attack">Attack</a>
 </html>

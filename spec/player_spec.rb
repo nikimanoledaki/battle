@@ -9,4 +9,10 @@ describe Player do
     end    
   end
 
+  describe '#attack' do
+    it 'reduces the HP of Player 2 by 10' do
+      expect{ subject.attack }.to change { subject.points }.by -10
+    end
+  end
+
 end
