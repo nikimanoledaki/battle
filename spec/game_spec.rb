@@ -2,7 +2,7 @@ require 'game'
 
 describe Game do
   let(:player_1) { double("Player 1") }
-  let(:player_2) { double("Player 2", receive_damage: true) }
+  let(:player_2) { double("Player 2", points: 10, receive_damage: true) }
   subject(:game) { Game.new(player_1, player_2) }
 
   describe '#attack' do
@@ -29,6 +29,15 @@ describe Game do
       game.attack(player_2)
       game.switch_turn
       expect(game.attacker).to eq player_2
+    end
+  end
+
+  describe '#lost?' do
+    let(:player_3) {double(:player, points: 0, receive_damage: true)}
+    let(:player_4) {double(:player, points: 0, receive_damage: true)}
+    subject(:game) { Game.new(player_3, player_4) }
+    it 'returns true if any player has 0 points' do
+      expect(game.lost?).to eq true
     end
   end
 end

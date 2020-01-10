@@ -22,4 +22,8 @@ class Game
   def victim
     @victim = @players.last
   end
+
+  def lost?
+    @player_1.points == 0 || @player_2.points == 0
+  end
 end
