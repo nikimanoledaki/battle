@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <h1><%= @game.player_1.name + " versus " + @game.player_2.name %></h1>
+  <h2><%= @game.attacker.name %>, it's your turn!</h2>
+  
   <div><%= "#{@game.player_1.name}: #{@game.player_1.points}"%>/60 HP</div>
   <div><%= "#{@game.player_2.name}: #{@game.player_2.points}"%>/60 HP</div>
   <a href="/attack">Attack</a>

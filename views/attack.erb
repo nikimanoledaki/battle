@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html>
-<%= @game.player_1.name %> attacked <%= @game.player_2.name %>
-  <a href="/play">Return</a>
+<%= @game.attacker.name %> attacked <%= @game.victim.name %>
+  <form action="/switch_turn" method="post">
+  <input type="submit" value="Return">
+  </form>
 </html>
