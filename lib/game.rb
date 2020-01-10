@@ -1,11 +1,10 @@
 class Game
-  attr_reader :player_1, :player_2, :players, :total, :victim, :attacker
+  attr_reader :player_1, :player_2
 
   def initialize(player_1, player_2)
     @player_1 = player_1
     @player_2 = player_2
     @players = [@player_1, @player_2]
-    @total = 0
   end
 
   def attack(player = @victim)
@@ -13,14 +12,14 @@ class Game
   end
 
   def switch_turn
-    @total += 1
+    @players.rotate!
   end
 
   def attacker
-    @attacker = @players[@total % 2]
+    @attacker = @players.first
   end
 
   def victim
-    @victim = @players[(@total + 1) % 2]
+    @victim = @players.last
   end
 end

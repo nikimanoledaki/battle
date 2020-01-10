@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
-<%= @game.attacker.name %> attacked <%= @game.victim.name %>
+
+<body>
+  <%= @game.attacker.name %> attacked <%= @game.victim.name %>
   <form action="/switch_turn" method="post">
   <input type="submit" value="Return">
   </form>
+</body>
 </html>
