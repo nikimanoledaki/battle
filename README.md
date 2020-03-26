@@ -1,5 +1,22 @@
 # Battle
 
+This is a turn-based two-player game. It was a weekly challenge at Makers Academy.
+
+## Get started
+Clone this repo, `cd` into the folder, then install the gems.
+```
+git clone https://github.com/nikimanoledaki/battle.git
+cd battle
+bundle install
+```
+
+## Test
+Run the RSpec tests.
+```
+rspec
+```
+
+## User Stories
 ```
 As two Players,
 So we can play a personalised game of Battle,
